@@ -1,0 +1,149 @@
+# 📱 Gen Z Social Media Usage & Mental Health — EDA
+
+> *Does heavy social media use actually hurt mental health? Which platforms are most addictive? Is night scrolling really that bad?*
+> A full end-to-end EDA on ~1 million Gen Z users to find out.
+
+---
+
+## 🧩 Central Question
+
+**Does heavy social media use actually damage mental health — and if so, which platforms, habits, and user types are most at risk?**
+
+---
+
+## 🛠 Tech Stack
+
+| Tool | Purpose |
+|---|---|
+| Python + Pandas | Data loading, cleaning, wrangling |
+| NumPy | Numerical computation |
+| Matplotlib | Visualisation |
+| Seaborn | Statistical plots |
+| Jupyter Notebook | Environment |
+
+---
+
+## 📂 Dataset
+
+**File:** `genz_social_media_usage_1M.csv`
+**Size:** ~1 million rows · 12 columns
+
+| Column | Description |
+|---|---|
+| `age` | User age |
+| `gender` | Gender |
+| `country` | Country of user |
+| `primary_platform` | Most-used social media platform |
+| `daily_usage_hours` | Hours spent daily on social media |
+| `avg_session_minutes` | Average session length |
+| `num_platforms_used` | Number of platforms actively used |
+| `night_usage` | Whether user uses social media at night |
+| `purpose` | Primary reason for using social media |
+| `addiction_level` | Self-reported addiction (Low / Medium / High) |
+| `mental_health_score` | Mental health score (higher = better) |
+| `screen_time_before_sleep` | Screen time in the hour before sleep |
+
+---
+
+## 🔬 Analysis Pipeline
+
+### 01 · Data Quality Check
+- Null audit across all 12 columns
+- Duplicate detection and removal
+- Dtype validation
+
+### 02 · Feature Engineering
+Two new columns:
+- **`usage_category`** — Light (<2h) / Moderate (2–5h) / Heavy (5h+)
+- **`high_risk_flag`** — Binary: High addiction + below-median mental health + night usage
+
+### 03 · Univariate Analysis
+- Histogram + boxplot for every numerical column with skewness interpretation
+- Bar chart + pie chart for every categorical column
+- Top 10 countries horizontal bar chart
+
+### 04 · Outlier Detection
+- IQR method across all numerical features
+- Lower/upper bounds, outlier count and % per column
+
+### 05 · GroupBy Analysis
+- Addiction level → avg usage hours + mental health score
+- Platform → avg usage + mental health
+- Gender breakdown: usage, mental health, screen time before sleep
+- Purpose → mental health + usage
+- Pivot table: usage category × addiction level → avg mental health score
+
+### 06 · Bivariate Analysis
+- Daily usage vs addiction level (split by gender)
+- Night usage vs mental health (split by addiction level)
+- Platform vs avg daily usage
+- Regression: usage hours → mental health score
+- Regression: screen time before sleep → mental health score
+- Platforms used vs daily usage hours (coloured by usage category)
+
+### 07 · Multivariate Analysis
+- Violin plots: mental health × usage category × addiction level
+- Heatmap: platform × addiction level → avg daily usage
+- High-risk user % by platform (bar chart with annotations)
+
+### 08 · Correlation Heatmap
+- Lower-triangle heatmap of all numerical features
+- Ranked table of strongest correlation pairs
+
+---
+
+## 🔑 Key Findings
+
+1. **Addiction vs usage** — High addiction users average significantly more hours/day than low addiction users. The gap is real and consistent.
+
+2. **Night usage** — Users who scroll at night consistently show lower mental health scores.
+
+3. **High-risk segment** — A notable % of users hit all three risk conditions simultaneously: High addiction + below-median mental health + night usage.
+
+4. **Platform matters** — There's a measurable gap between the lowest and highest mental health scores across platforms.
+
+5. **Skewed distribution** — Usage hours are right-skewed. A small group of extreme users pulls the mean above the median; most users are Light to Moderate.
+
+6. **Purpose is linked to wellbeing** — Why someone uses social media (entertainment, connection, etc.) correlates with their mental health score.
+
+---
+
+## 📁 Project Structure
+
+```
+genz-social-media-eda/
+│
+├── notebook.ipynb                    # Main analysis notebook
+├── genz_social_media_usage_1M.csv    # Dataset (add locally)
+└── README.md                         # You are here
+```
+
+---
+
+## ▶️ How to Run
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/krishrrathore/genz-social-media-eda
+cd genz-social-media-eda
+
+# 2. Install dependencies
+pip install pandas numpy matplotlib seaborn jupyter
+
+# 3. Place the dataset in the correct path, then run
+jupyter notebook notebook.ipynb
+```
+
+---
+
+## 👤 Author
+
+**Krish Rathore**
+B.Com (H) · Delhi University | Data Analytics · SkillCircle
+
+- GitHub: [krishrrathore](https://github.com/krishrrathore)
+- LinkedIn: [linkedin.com/in/krishrrathore](https://linkedin.com/in/krishrrathore)
+
+---
+
+⭐ If you found this useful, give the repo a star!
