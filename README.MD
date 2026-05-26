@@ -1,89 +1,80 @@
 <div align="center">
 
-# 🧠 Gen Z Social Media Usage & Mental Health Analysis
+# 🧠 Gen Z Social Media & Mental Health Analysis
 
 ### Exploratory Data Analysis using Python
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas"/>
+  <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Seaborn-4C72B0?style=flat-square"/>
+</p>
 
 </div>
 
 ---
 
-# 📌 Project Overview
+## 📌 Overview
 
-This project explores the relationship between social media usage patterns and mental health indicators among Gen Z users through Exploratory Data Analysis (EDA).
+This project explores the relationship between social media usage patterns and mental health indicators among Gen Z users.
 
-The analysis focuses on:
-- addiction behavior
-- screen time patterns
-- night-time usage
-- platform preferences
+The analysis investigates:
+
+- screen time behavior
+- addiction patterns
+- night-time scrolling habits
+- platform usage trends
 - mental wellbeing indicators
 
 ---
 
-# 🎯 Objective
+## 🎯 Objective
 
-The primary objective of this analysis is to identify behavioral trends and high-risk usage patterns that may correlate with lower mental health scores.
+The primary objective of this project is to identify behavioral patterns associated with excessive social media usage and analyze their potential relationship with mental health outcomes.
 
 ---
 
-# 🛠️ Tech Stack
+## 📊 Analysis Workflow
 
-| Category | Tools |
+| Stage | Description |
 |---|---|
-| Programming Language | Python |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Environment | Jupyter Notebook |
+| Data Cleaning | Missing values, duplicates, datatype validation |
+| Feature Engineering | Usage segmentation & high-risk indicators |
+| Univariate Analysis | Distribution & statistical analysis |
+| Bivariate Analysis | Relationship analysis between variables |
+| Multivariate Analysis | Behavioral segmentation & correlations |
+| Visualization | Statistical and comparative charts |
 
 ---
 
-# 📊 Analysis Workflow
+## 📈 Key Insights
 
-## 1. Data Cleaning
-- Missing value handling
-- Duplicate removal
-- Data validation
+✅ Heavy users demonstrated significantly higher addiction scores  
 
-## 2. Feature Engineering
-Created:
-- usage categories
-- addiction segmentation
-- high-risk user flags
+✅ Late-night scrolling behavior correlated with lower mental health scores  
 
-## 3. Exploratory Data Analysis
-Performed:
-- univariate analysis
-- bivariate analysis
-- multivariate analysis
-- correlation analysis
+✅ Usage distribution was positively skewed with a small segment of extreme users  
 
-## 4. Visualization
-Generated:
-- histograms
-- KDE plots
-- boxplots
-- heatmaps
-- scatterplots
+✅ Platform preferences showed measurable behavioral differences  
 
 ---
 
-# 📈 Key Insights
+## 🛠️ Tech Stack
 
-- High addiction users showed significantly higher screen time.
-- Night-time scrolling behavior correlated with lower mental health scores.
-- Usage distribution was positively skewed.
-- Platform preferences showed noticeable behavioral differences.
+```python
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Jupyter Notebook
+```
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
 
 ```bash
 genz-social-media-eda/
@@ -96,7 +87,7 @@ genz-social-media-eda/
 
 ---
 
-# ⚙️ Installation
+## 🚀 Installation
 
 ```bash
 git clone https://github.com/your-username/genz-social-media-eda.git
@@ -108,16 +99,13 @@ pip install pandas numpy matplotlib seaborn jupyter
 
 ---
 
-# 🚀 Future Improvements
+## 📷 Preview
 
-- Predictive modeling
-- Dashboard development
-- Behavioral clustering
-- Machine learning integration
+<img width="100%" src="YOUR_SCREENSHOT_LINK_HERE"/>
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Krish Rathore**  
-  Data Analyst
+Aspiring Data Analyst
