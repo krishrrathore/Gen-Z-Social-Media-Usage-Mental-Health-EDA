@@ -99,7 +99,6 @@ pip install pandas numpy matplotlib seaborn jupyter
 
 ---
 
-## 📷 Preview
 
 <img width="100%" src="YOUR_SCREENSHOT_LINK_HERE"/>
 
