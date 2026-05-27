@@ -107,4 +107,4 @@ pip install pandas numpy matplotlib seaborn jupyter
 ## 👨‍💻 Author
 
 **Krish Rathore**  
-Aspiring Data Analyst
+  Data Analyst
